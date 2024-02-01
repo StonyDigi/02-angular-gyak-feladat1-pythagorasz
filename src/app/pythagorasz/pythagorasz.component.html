@@ -1,0 +1,14 @@
+<div class="container d-flex justify-content-center align-items-center flex-column">
+    <h1 class="mb-5">Pythagoras item</h1>
+    <div class="d-flex justify-content-center align-items-center flex-column">
+        <label for="befogo1">Első befogó:</label>
+        <input class="form-control" type="number" id="befogo1" [(ngModel)]="befogo1" />
+        <label for="befogo1">Második befogó:</label>
+        <input class="mt-2 form-control" type="number" id="befogo2" [(ngModel)]="befogo2" />
+    </div>
+    <button class="mt-5 btn btn-primary" (click)="calculateAtfogo()">Átfogó számolása</button>
+    <div *ngIf="atfogo !== null">
+        <p class="mt-2">A két befogó alapján az átfogó hossza: <strong>{{ atfogo | number:'1.2-2' }}</strong></p>
+    </div>
+
+</div>
